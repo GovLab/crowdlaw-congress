@@ -10,6 +10,17 @@ $cl-teal: #7DE2E1;
 $cl-yellow: #FED136;
 $cl-white: #F2F2F2;
 
+
+$cl-purple: #05a8aa;
+$cl-teal: #c42021;
+$cl-yellow: #f18f01;
+$cl-white: #084c61;
+
+
+
+
+
+
 $cool-gray: #ced5e3;
 
 $main-color: $cl-purple;
@@ -73,21 +84,23 @@ $custom: screen and (min-width: 1111px) and (max-width: 1168px);
   &--blue { background-color: $cl-purple; color: $white; }
   &--orange {
     background-color: $cl-yellow;
-    color: $black;
+    color: $white;
     .button--naked {
-      color: $black;
+      color: $white;
     }
   }
   &--yellow {
     background-color: $cl-teal;
+    color: $white;
     .button--naked {
-      color: $black;
+      color: $white;
     }
   }
   &--fuschia {
     background-color: $cl-white;
+    color: $white;
     .button--naked {
-      color: $black;
+      color: $white;
     }
   }
   &--no-padding {

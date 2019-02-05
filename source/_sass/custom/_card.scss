@@ -36,16 +36,16 @@
       }
     }
     &.impact-citizens .e-card-inner {
-      background-color: $cl-orange;
+      background-color: $cl-white;
     }
     &.impact-government .e-card-inner {
       background-color: $cl-purple;
     }
     &.impact-economic .e-card-inner {
-      background-color: $cl-yellow; color: $black;
+      background-color: $cl-yellow;
     }
     &.impact-public .e-card-inner {
-      background-color: $cl-teal; color: $black;
+      background-color: $cl-teal;
     }
     &.m-unreleased .e-card-inner {
       background-color: $gray-30;
