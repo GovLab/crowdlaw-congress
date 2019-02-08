@@ -16,6 +16,16 @@ layout: default
             <h1>{{page.title}}</h1>
           {% endif %}
           <h2>{{page.description}}</h2>
+
+<div class="progress progress--2">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
           {% comment %}
           {% if page.authors %}
             <h4>by {{page.authors}}{% if page.special_thanks %}<a class="_idFootnoteLink" href="#footnote-999">*</a>{% endif %}</h4>
@@ -26,9 +36,11 @@ layout: default
     </div>
     <div class="row">
       <div class="large-6 column tags tags--left hide-for-small-only">
+        {% comment %}
         {% if page.impact_type %}
           <p><strong style="width: 40%">Impact</strong><span>{{page.impact_type}}</span></p>
         {% endif %}
+        {% endcomment %}
         {% if page.method %}
           <p><strong style="width: 40%">Method</strong><span>{{page.method}}</span></p>
         {% endif %}

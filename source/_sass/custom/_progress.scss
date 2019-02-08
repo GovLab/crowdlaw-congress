@@ -1,0 +1,95 @@
+.progress {
+    @include breakpoint($small-only) {
+        border: 1px solid $white-40;
+        padding: 3px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    @include breakpoint($large) {
+        width: 100%;
+        border-bottom: 1px solid $white-20;
+        margin-top: 70px;
+        margin-bottom: 20px;
+        padding-left: 120px;
+        position: relative;
+    }
+
+    &:before {
+        @include breakpoint($small-only) {
+            color: $white-60;
+            content: '';
+        }
+
+        @include breakpoint($large) {
+            color: $white-30;
+            content: '';
+            position: absolute;
+            bottom: -13px;
+            left: -120px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+    }
+
+    &:after {
+        @include breakpoint($large) {
+            position: absolute;
+            content: "";
+            border-bottom: 1px solid $white-50;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    span:before {
+        color: $white-60;
+        display: none;
+
+
+        @include breakpoint($large) {
+            position: absolute;
+            margin-top: -35px;
+            display: block;
+            color: $white-30;
+        }
+    }
+
+    span:nth-child(1):before {
+        content: "Problem Definition";
+        @include breakpoint($large) { width: 200px; right: 83%; }
+    }
+    span:nth-child(2):before {
+        content: "Solution Identification";
+        @include breakpoint($large) { right: 55%; }
+    }
+    span:nth-child(3):before {
+        content: "Drafting";
+        @include breakpoint($large) { right: 30%; }
+    }
+    span:nth-child(4):before {
+        content: "Evaluation";
+        @include breakpoint($large) { right: 0; }
+    }
+
+    &--1    span:nth-child(1):before,
+    &--2 span:nth-child(2):before,
+    &--3      span:nth-child(3):before,
+    &--4  span:nth-child(4):before {
+        color: $white-90;
+        font-weight: bold;
+
+        @include breakpoint($small-only) {
+            display: inline-block;
+            font-weight: 600;
+        }
+    }
+
+    &--1:after    { width: 17%;  }
+    &--2:after { width: 45%;  }
+    &--3:after      { width: 70%;  }
+    &--4:after  { width: 100%; }
+}

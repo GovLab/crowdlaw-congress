@@ -125,16 +125,23 @@
   }
 
   .button {
-    background-color: $main-color;
     padding-left: 30px;
     padding-right: 30px;
     font-weight: 600;
-    &:hover {
-      background-color: darken($main-color, 5);
+
+    &--problem-definition { background-color: $cl-white; }
+    &--solution-identification {
+      background-color: $cl-yellow;
+      &:hover {
+        background-color: darken($cl-yellow, 5);
+      }
     }
-    &--citizens { @extend .m-citizens; }
-    &--government { @extend .m-government; }
-    &--economic { @extend .m-economic; }
-    &--public { @extend .m-public; }
+    &--drafting { background-color: $cl-teal; }
+    &--evaluation { background-color: $cl-yellow; }
   }
 }
+
+// $cl-purple: #05a8aa;
+// $cl-teal: #c42021;
+// $cl-yellow: #f18f01;
+// $cl-white: #084c61;
