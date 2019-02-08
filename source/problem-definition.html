@@ -1,28 +1,39 @@
 ---
 layout: stage-template
 title: Problem Definition
-image: colombia-header.jpg
+image: problem-stage.jpg
 description: Description
 ---
-{% contentfor readtime %}
-  {%include readtime.html%}
-{% endcontentfor %}
 
 {% contentfor summary %}
-  <p class="text">Defining the problem benefits from the input of diverse people with lived experience. This video features three online methods for gathering collective knowledge from a widely dispersed population.</p>
+<p class="text">Defining the problem benefits from the input of diverse people with lived experience. This video features three online methods for gathering collective knowledge from a widely dispersed population.</p>
 {% endcontentfor %}
-
 
 {% contentfor video %}
-
-  <div class="">
-    <p class="text">VIDEO</p>
-    <p class="text">
-      Video:
-      Description: Short paragraph about the platform
-      About the interviewee: Short paragraph about the person
-      Download transcript:
-    </p>
-  </div>
-
+<div>
+  <iframe width="100%" height="400px" src="https://www.youtube.com/embed/jO7onTaloRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 {% endcontentfor %}
+
+{% contentfor interviews %}
+<div>
+  <iframe width="100%" height="400px" src="https://www.youtube.com/embed/jO7onTaloRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p class="text">
+  <dl>
+    <dt><b>Description:</b></dt>
+    <dd>Short paragraph about the platform</dd>
+    <dt><b>About the interviewee:</b></dt>
+    <dd>Short paragraph about the person</dd>
+  </dl>
+  <a class="button">Download Transcript</a>
+</p>
+{% endcontentfor %}
+
+
+{% comment %}
+{% contentfor cases %}
+  {% include cases-problem-definition.html %}
+{% endcontentfor %}
+{% endcomment %}

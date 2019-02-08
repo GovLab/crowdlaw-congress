@@ -3,7 +3,7 @@ layout: default
 ---
 <main class="case-study-page" role="main" id="case-study-page">
   <!-- Header with structured data -->
-  <section class="top-section" style="background-image: url(images/banners/{{page.image}})">
+  <section class="top-section" style="background-image: url(images/banners/{{page.image}}); height: 50vh;">
     <div class="top-section__shade"></div>
     <div class="row">
       <div class="large-12 small-12 column">
@@ -11,13 +11,13 @@ layout: default
           <!-- <h4 class="collection m-{{page.impact_type | slugify}}">{{page.case_collection_long}}</h4> -->
           {% assign title_size = page.title | size %}
           {% if title_size > 20 %}
-            <h1 class="large-title">{{page.title}}</h1>
+          <h1 class="large-title">{{page.title}}</h1>
           {% else %}
-            <h1>{{page.title}}</h1>
+          <h1>{{page.title}}</h1>
           {% endif %}
           <h2>{{page.description}}</h2>
           {% if page.authors %}
-            <h4>by {{page.authors}}{% if page.special_thanks %}<a class="_idFootnoteLink" href="#footnote-999">*</a>{% endif %}</h4>
+          <h4>by {{page.authors}}{% if page.special_thanks %}<a class="_idFootnoteLink" href="#footnote-999">*</a>{% endif %}</h4>
           {% endif %}
         </hgroup>
       </div>
@@ -37,7 +37,7 @@ layout: default
         {% ifhascontent readtime %}
           {% contentblock readtime %}
         {% endifhascontent %}
-    </div> -->
+      </div> -->
 <!--     <div class="floating-button">
       <a class="button button--{{page.impact_type | slugify}}" href="files/{{page.download}}">Download The Report<i class="material-icons">file_download</i></a>
     </div> -->
@@ -80,7 +80,7 @@ layout: default
       </div>
       <div class="column small-12 large-9">
         <div class="e-expandable">
-          {% contentblock description %}
+          {% contentblock video %}
           <span class="e-read-more js-more-toggle">Read More</span>
         </div>
       </div>
@@ -88,13 +88,31 @@ layout: default
   </section>
   {% endifhascontent %}
 
-  {% include cases-problem-definition.html %}
+  {% ifhascontent interviews %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Interviews Section</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="">
+          {% contentblock interviews %}
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
 
-<!--
-<section class="page-section">
-  <div class="row">
-    <div class="column large-12 e-last">
-      <p>Learn about our <a href="about.html">methodology</a></p>
+  {% ifhascontent cases %}
+
+
+  <div class="divider">
+    <div class="row align-center">
+      <h2 style="text-transform: uppercase;">Case Studies</h2>
     </div>
   </div>
-</section> -->
+
+  <p>&nbsp;</p>
+
+  {% contentblock cases %}
+  {% endifhascontent %}
