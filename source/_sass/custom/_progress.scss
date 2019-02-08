@@ -46,31 +46,36 @@
     }
 
     span:before {
-        color: $white-60;
+        color: $white-90;
         display: none;
+        // padding: 5px 10px;
 
 
         @include breakpoint($large) {
             position: absolute;
             margin-top: -35px;
             display: block;
-            color: $white-30;
+            color: $white-90;
         }
     }
 
     span:nth-child(1):before {
+        // background-color: rgba(0,0,0,0.5);
         content: "Problem Definition";
         @include breakpoint($large) { width: 200px; right: 83%; }
     }
     span:nth-child(2):before {
+        // background-color: $cl-yellow;
         content: "Solution Identification";
         @include breakpoint($large) { right: 55%; }
     }
     span:nth-child(3):before {
+        // background-color: rgba(0,0,0,0.5);
         content: "Drafting";
         @include breakpoint($large) { right: 30%; }
     }
     span:nth-child(4):before {
+        // background-color: rgba(0,0,0,0.5);
         content: "Evaluation";
         @include breakpoint($large) { right: 0; }
     }
@@ -79,7 +84,7 @@
     &--2 span:nth-child(2):before,
     &--3      span:nth-child(3):before,
     &--4  span:nth-child(4):before {
-        color: $white-90;
+        color: $white;
         font-weight: bold;
 
         @include breakpoint($small-only) {

@@ -11,20 +11,21 @@ layout: default
           <h4 class="collection m-{{page.impact_type | slugify}}">{{page.case_collection_long}}</h4>
           {% assign title_size = page.title | size %}
           {% if title_size > 20 %}
-            <h1 class="large-title">{{page.title}}</h1>
+          <h1 class="large-title">{{page.title}}</h1>
           {% else %}
-            <h1>{{page.title}}</h1>
+          <h1>{{page.title}}</h1>
           {% endif %}
           <h2>{{page.description}}</h2>
 
-<div class="progress progress--2">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+
+        <div class="progress progress--2">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
           {% comment %}
           {% if page.authors %}
@@ -42,16 +43,17 @@ layout: default
         {% endif %}
         {% endcomment %}
         {% if page.method %}
-          <p><strong style="width: 40%">Method</strong><span>{{page.method}}</span></p>
+        <p><strong style="width: 40%">Method</strong><span>{{page.method}}</span></p>
         {% endif %}
         {% if page.participatory_task %}
-          <p><strong style="width: 40%">Participatory Task</strong><span>{{page.participatory_task}}</span></p>
+        <p><strong style="width: 40%">Participatory Task</strong><span>{{page.participatory_task}}</span></p>
         {% endif %}
       </div>
-        {% ifhascontent readtime %}
-          {% contentblock readtime %}
-        {% endifhascontent %}
+      {% ifhascontent readtime %}
+      {% contentblock readtime %}
+      {% endifhascontent %}
     </div>
+
     <div class="floating-button">
       <a class="button button--{{page.impact_type | slugify}}" href="files/{{page.download}}">Download The Report<i class="material-icons">file_download</i></a>
     </div>
