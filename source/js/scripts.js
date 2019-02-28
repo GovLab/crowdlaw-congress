@@ -52,9 +52,9 @@ $(document).ready(function () {
     $('.js-open-modal').click(function () {
         var data = $(this).attr('data-open')
         if (data) {
-          $(this).parent().find(data).addClass('js-active');
+          $('body').find(data).addClass('js-active');
       } else {
-          $(this).parent().find('.js-target-modal').addClass('js-active');
+          $('body').find('.js-target-modal').addClass('js-active');
       }
       currentScroll=$(window).scrollTop();
       $(window).bind('scroll',lockscroll);
