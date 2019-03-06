@@ -71,7 +71,8 @@ $(document).ready(function () {
     $('body').on("click", '.js-close-modal', function () {
         currentScroll=$(window).scrollTop();
         $(window).unbind('scroll');
-        $('.js-target-modal').removeClass('js-active');
+        // $('.js-target-modal').removeClass('js-active');
+        $('.modal').removeClass('js-active');
         $('#overlay').removeClass('js-active');
         $('body').removeClass('js-body-modal-active');
     });

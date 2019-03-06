@@ -49,6 +49,31 @@ div {
     margin-top: 40px;
 }
 
+.video-thumbnail {
+    padding-top: .9375rem;
+    padding-bottom: .9375rem;
+}
+
+
+.video-name {
+    padding-top: 5px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.video-sub {
+    font-weight: 0.7rem;
+    opacity: 0.5;
+}
+
+#overlay {
+    background-color: #000;
+}
+
+.main-menu:not(.js-active-menu) {
+    box-shadow: none;
+}
+
 // .sticky, .b-sticky {
 //     padding: 0;
 // }
