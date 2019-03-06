@@ -55,7 +55,7 @@ $custom: screen and (min-width: 1111px) and (max-width: 1168px);
 /* import site specific rules */
 
 // @import 'custom/variables';
-// @import 'custom/base';
+@import 'custom/base';
 // @import 'custom/typography';
 @import 'custom/topnav';
 @import 'custom/projects-list';

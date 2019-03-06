@@ -22,3 +22,39 @@ div {
 .modal__content {
     background-color: #523080;
 }
+
+.team-picture {
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 30px auto 0;
+    height: 180px;
+    width: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.team-name {
+    font-size: 1.3rem;
+}
+
+.team-title {
+    font-weight: 0.7rem;
+    opacity: 0.5;
+}
+
+.team-row {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+// .sticky, .b-sticky {
+//     padding: 0;
+// }
+
+// @media (min-width: 1025px) {
+//     .b-sticky {
+//         padding: 0;
+//     }
+// }
