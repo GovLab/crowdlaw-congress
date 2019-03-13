@@ -17,8 +17,18 @@ layout: default
           {% endif %}
           <h2>{{page.description}}</h2>
 
-
-        <div class="progress progress--2">
+          {% if page.impact_type == "problem_definition" %}
+          <div class="progress progress--1">
+          {% endif %}
+          {% if page.impact_type == "solution_identification" %}
+          <div class="progress progress--2">
+          {% endif %}
+          {% if page.impact_type == "drafting" %}
+          <div class="progress progress--3">
+          {% endif %}
+          {% if page.impact_type == "evaluation" %}
+          <div class="progress progress--4">
+          {% endif %}
           <span></span>
           <span></span>
           <span></span>
