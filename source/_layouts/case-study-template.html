@@ -87,6 +87,38 @@ layout: default
   {% endifhascontent %}
 
 
+  {% ifhascontent what %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>What Is It?</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock what %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+  {% ifhascontent how %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>What Is It?</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock how %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
   {% ifhascontent takeaways %}
   <section class="page-section">
     <div class="row">
@@ -113,6 +145,57 @@ layout: default
       <div class="column small-12 large-9">
         <div class="e-expandable">
           {% contentblock introduction %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+  {% ifhascontent studentled %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Student-led Civic Audits in Brazil</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock studentled %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+
+
+  {% ifhascontent ghana %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>TransGov Ghana</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock ghana %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+
+  {% ifhascontent cpec %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Connecticut Policy and Economic Council (CPEC): City Scan</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock ghana %}
           <span class="e-read-more js-more-toggle">Read More</span>
         </div>
       </div>
@@ -482,6 +565,23 @@ layout: default
   {% endifhascontent %}
 
 
+  {% ifhascontent whatoutcomes %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>What are the outcomes?</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock whatoutcomes %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+
   {% ifhascontent outcomes %}
   <section class="page-section">
     <div class="row">
@@ -633,6 +733,39 @@ layout: default
   </section>
   {% endifhascontent %}
 
+
+  {% ifhascontent benefits %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>What are the benefits?</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock benefits %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+
+  {% ifhascontent whatrisk %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>What are the risks?</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock whatrisk %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
 
   {% ifhascontent duration %}
   <section class="page-section">
