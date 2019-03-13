@@ -129,7 +129,7 @@
     padding-right: 30px;
     font-weight: 600;
 
-    &--problem-definition { background-color: $cl-white; }
+    &--evaluation { background-color: $cl-white; }
     &--solution-identification {
       background-color: $cl-yellow;
       &:hover {
@@ -137,7 +137,7 @@
       }
     }
     &--drafting { background-color: $cl-teal; }
-    &--evaluation { background-color: $cl-yellow; }
+    &--problem-definition { background-color: $cl-purple; }
   }
 }
 
