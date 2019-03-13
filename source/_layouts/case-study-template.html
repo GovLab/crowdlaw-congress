@@ -65,10 +65,27 @@ layout: default
     <ul class="b-sidebar">
       <a href="#" id="facebook"><li class="facebook"><i class="fa fa-facebook"></i></li></a><a href="#" id="linkedin"><li class="linkedin"><i class="fa fa-linkedin"></i></li></a>
       <a href="#" id="twitter"><li class="twitter"><i class="fa fa-twitter"></i></li></a>
-      <a href="#" id="email" message="mailto:?subject={{ page.title | url_escape }}&body={{ page.description| append: '%0A%0ARead More%0A%0A' | url_escape}}"><li class="email"><i class="fa fa-envelope"></i></li></a>
+      <a href="#" id="email" message="mailto:?subject={{ page.title | url_escape }}&body={{ page.description | append: '%0A%0ARead More%0A%0A' | url_escape}}"><li class="email"><i class="fa fa-envelope"></i></li></a>
     </ul>
   </div>
   <!-- End of Header -->
+
+  {% ifhascontent briefing %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Briefing Notes</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock briefing %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
 
   {% ifhascontent takeaways %}
   <section class="page-section">
@@ -120,6 +137,22 @@ layout: default
   {% endifhascontent %}
 
 
+  {% ifhascontent campaign %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>From Campaigning to Governing</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock campaign %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
   {% ifhascontent mechanics %}
   <section class="page-section">
     <div class="row">
@@ -137,6 +170,102 @@ layout: default
   {% endifhascontent %}
 
 
+  {% ifhascontent cdmx %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Mechanics of Constituci&oacute;n CDMX</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock cdmx %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+  {% ifhascontent mudamos %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Mechanics of Mudamos</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock mudamos %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+  {% ifhascontent reyk %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Mechanics of Better Reykjavik</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock reyk %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+
+  {% ifhascontent dist %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Mechanics of My District</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock dist %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+  {% ifhascontent crowd %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Crowd Constitutionmaking in Action</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock crowd %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+  {% ifhascontent anote %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>A Note on Lower Levels of Government</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock anote %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
 
   {% ifhascontent vtaiwan %}
   <section class="page-section">
@@ -206,6 +335,55 @@ layout: default
   {% endifhascontent %}
 
 
+  {% ifhascontent cultural %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Institutional and Cultural Changes</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock cultural %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+  {% ifhascontent advertisement %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Advertisement Campaigns</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock advertisement %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+
+  {% ifhascontent costs %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Costs</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock costs %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
   {% ifhascontent instdescription %}
   <section class="page-section">
     <div class="row">
@@ -222,6 +400,53 @@ layout: default
   </section>
   {% endifhascontent %}
 
+  {% ifhascontent instdescriptionsolo %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Institutional Description</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock instdescription %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+  {% ifhascontent instimpactsolo %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Institutional Impacts</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock instimpactsolo %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+  {% ifhascontent impacts %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Impacts</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock instdescription %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
 
   {% ifhascontent rahvaalgatus %}
   <section class="page-section">
@@ -249,6 +474,107 @@ layout: default
       <div class="column small-12 large-9">
         <div class="e-expandable">
           {% contentblock risks %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+
+  {% ifhascontent outcomes %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Outcomes</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock outcomes %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+
+  {% ifhascontent numbers %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Numbers and Results</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock numbers %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+  {% ifhascontent future %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Future Plans</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock future %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+
+  {% ifhascontent reactions %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Reactions</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock reactions %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+  {% ifhascontent experience %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Users&rsquo; experience and perceptions after engaging with Constituci&oacute;n CDMX</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock experience %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+
+
+  {% ifhascontent tableone %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Table 1: Online petitions that surpassed the established thresholds of digital signatures in the Constituci&oacute;n CDMX strategy.</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock tableone %}
           <span class="e-read-more js-more-toggle">Read More</span>
         </div>
       </div>
@@ -351,6 +677,23 @@ layout: default
       <div class="column small-12 large-9">
         <div class="e-expandable">
           {% contentblock recommendations %}
+          <span class="e-read-more js-more-toggle">Read More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endifhascontent %}
+
+
+  {% ifhascontent conclusion %}
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Conclusion</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expandable">
+          {% contentblock conclusion %}
           <span class="e-read-more js-more-toggle">Read More</span>
         </div>
       </div>
