@@ -21,6 +21,11 @@ $(document).ready(function () {
     // });
 
 
+    $( "iframe" ).each(function( index ) {
+      $(this).height($(this).width()*0.5625);
+    });
+
+
     function createCookie(name,value,days) {
         var expires = "";
         if (days) {
