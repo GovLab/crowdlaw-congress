@@ -21,7 +21,7 @@ $(document).ready(function () {
     // });
 
 
-    $( "iframe" ).each(function( index ) {
+    $( ".iframe-js-h" ).each(function( index ) {
       $(this).height($(this).width()*0.5625);
     });
 
