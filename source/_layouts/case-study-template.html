@@ -89,13 +89,21 @@ layout: default
       <div class="column small-12 large-9">
         <div class="e-expandable">
           {% contentblock briefing %}
+          <div><p><b>URL:</b> <a href="{{page.link}}" target="_blank">{{page.link}}</a></p></div>
+          <br><br>
           <span class="e-read-more js-more-toggle">Read More</span>
         </div>
       </div>
     </div>
   </section>
-  {% endifhascontent %}
 
+  <div class="divider">
+    <div class="row align-center">
+      <h2>Case Study</h2>
+    </div>
+  </div>
+
+  {% endifhascontent %}
 
   {% ifhascontent what %}
   <section class="page-section">
