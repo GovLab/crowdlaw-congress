@@ -87,11 +87,12 @@ layout: default
         <h3>Briefing Notes</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="">
           {% contentblock briefing %}
+          {% if page.link %}
           <div><p><b>URL:</b> <a href="{{page.link}}" target="_blank">{{page.link}}</a></p></div>
           <br><br>
-          <span class="e-read-more js-more-toggle">Read More</span>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -926,7 +927,7 @@ layout: default
 <section class="page-section">
   <div class="row">
     <div class="column large-12 e-last">
-      <p ><span >For more information or to request a proposal for a CrowdLaw project contact: </span><a href="#">XXXX</a><span >.</span></p>
+      <p ><span >For more information or to request a proposal for a CrowdLaw project contact: </span><a href="mailto:crowdlaw@thegovlab.org">crowdlaw@thegovlab.org</a><span >.</span></p>
     </div>
   </div>
 </section>

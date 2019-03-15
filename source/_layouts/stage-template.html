@@ -15,33 +15,11 @@ layout: default
           {% else %}
           <h1>{{page.title}}</h1>
           {% endif %}
-<!--           <h2>{{page.description}}</h2> -->
-          {% if page.authors %}
-          <h4>by {{page.authors}}{% if page.special_thanks %}<a class="_idFootnoteLink" href="#footnote-999">*</a>{% endif %}</h4>
-          {% endif %}
         </hgroup>
       </div>
     </div>
-<!--     <div class="row">
-      <div class="large-6 column tags tags--left hide-for-small-only">
-        {% if page.impact_type %}
-          <p><strong>Impact</strong><span>{{page.impact_type}}</span></p>
-        {% endif %}
-        {% if page.sector %}
-          <p><strong>Sector</strong><span>{{page.sector}}</span></p>
-        {% endif %}
-        {% if page.location %}
-          <p><strong>Location</strong><span>{{page.location}}</span></p>
-        {% endif %}
-      </div>
-        {% ifhascontent readtime %}
-          {% contentblock readtime %}
-        {% endifhascontent %}
-      </div> -->
-<!--     <div class="floating-button">
-      <a class="button button--{{page.impact_type | slugify}}" href="files/{{page.download}}">Download The Report<i class="material-icons">file_download</i></a>
-    </div> -->
 
+    <div id="explore-button" class="floating-button"><a id="explore-link" href="#explore-the-data" class="button  button--{{page.impact_type | slugify}}">Explore Case Studies</a></div>
   </section>
 
   <!-- SOCIAL MEDIA ICONS -->
@@ -123,6 +101,9 @@ layout: default
   {% ifhascontent cases %}
 
 
+  <a name="a-explore" id="a-explore"></a>
+  <a name="explore-the-data"></a>
+
   <div class="divider">
     <div class="row align-center">
       <h2 style="text-transform: uppercase;">Case Studies</h2>
@@ -130,6 +111,10 @@ layout: default
   </div>
 
   <p>&nbsp;</p>
-
   {% contentblock cases %}
   {% endifhascontent %}
+
+
+  {% contentfor custom_scripts %}
+  <script src="{{ '/js/tweens.js' | absolute_url }}"></script>
+  {% endcontentfor %}
