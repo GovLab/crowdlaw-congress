@@ -84,7 +84,26 @@ iframe {
     }
 }
 
+.e-h3 {
+  color: $od-blue;
+  font-style: italic;
+  width: 100%;
+}
 
+.e-h2 {
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: bold;
+    color: $od-blue;
+    margin-top: 0;
+    &:not(:first-child) { margin-top: 30px; }
+}
+
+
+.e-h1 {
+  font-size: 1.3rem;
+  color: $fuschia;
+}
 // .sticky, .b-sticky {
 //     padding: 0;
 // }
