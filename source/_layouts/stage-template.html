@@ -16,10 +16,31 @@ layout: default
           <h1>{{page.title}}</h1>
           {% endif %}
         </hgroup>
+        {% if page.impact_type == "problem_definition" %}
+          <div class="progress progress--1">
+          {% endif %}
+          {% if page.impact_type == "solution_identification" %}
+          <div class="progress progress--2">
+          {% endif %}
+          {% if page.impact_type == "drafting" %}
+          <div class="progress progress--3">
+          {% endif %}
+          {% if page.impact_type == "evaluation" %}
+          <div class="progress progress--4">
+          {% endif %}
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
-
-    <div id="explore-button" class="floating-button"><a id="explore-link" href="#explore-the-data" class="button  button--{{page.impact_type | slugify}}">Explore Case Studies</a></div>
+    <div id="explore-button" class="floating-button">
+      <a id="explore-link" href=""{{'/files/' | append: page.download | relative_url}}" class="button  button--{{page.impact_type | slugify}}">Download the case studies <i class="material-icons">file_download</i></a>
+      <a id="explore-link" href="#explore-the-data" class="button  button--{{page.impact_type | slugify}}">Explore Case Studies</a>
+    </div>
   </section>
 
   <!-- SOCIAL MEDIA ICONS -->
