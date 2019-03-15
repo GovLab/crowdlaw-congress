@@ -58,6 +58,10 @@ layout: default
         {% if page.participatory_task %}
         <p><strong style="width: 40%">Participatory Task</strong><span>{{page.participatory_task}}</span></p>
         {% endif %}
+        {% if page.link %}
+        <p><strong style="width: 40%">URL</strong><span><a href="{{page.link}}" target="_blank">{{page.link}}</a></span></p>
+      <!--   <p><strong style="width: 40%"></strong><span><a href="{{page.link}}" target="_blank">{{page.link}}</span></p> -->
+        {% endif %}
       </div>
       {% ifhascontent readtime %}
       {% contentblock readtime %}
@@ -89,10 +93,6 @@ layout: default
       <div class="column small-12 large-9">
         <div class="e-expanded">
           {% contentblock briefing %}
-          {% if page.link %}
-          <div><p><b>URL:</b> <a href="{{page.link}}" target="_blank">{{page.link}}</a></p></div>
-          <br><br>
-          {% endif %}
         </div>
       </div>
     </div>
