@@ -69,8 +69,12 @@ layout: default
     </div>
 
     <div class="floating-button">
+      {% if page.download %}
       <a class="button button--{{page.impact_type | slugify}}" href="{{'/files/' | append: page.download | relative_url}}">Download case study<i class="material-icons">file_download</i></a>
+      {% endif %}
+      {% if page.download_briefing %}
       <a class="button button--{{page.impact_type | slugify}}" href="{{'/files/' | append: page.download_briefing | relative_url}}">Download briefing note<i class="material-icons">file_download</i></a>
+      {% endif %}
     </div>
 
   </section>
