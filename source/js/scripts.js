@@ -91,14 +91,14 @@ $(document).ready(function () {
     //     $('body').removeClass('js-body-modal-active');
 
     // });
-    if (readCookie('odimpact-disable-sticky') == null) {
-        $('.js-target-sticky').addClass('js-active');
-    }
+    // if (readCookie('odimpact-disable-sticky') == null) {
+    //     $('.js-target-sticky').addClass('js-active');
+    // }
 
     // Sticky Click Behavior
     $('.js-close-sticky').click(function () {
         $('.js-target-sticky').removeClass('js-active');
-        createCookie('odimpact-disable-sticky', true, false);
+        // createCookie('odimpact-disable-sticky', true, false);
     });
 
     // Search Click Behavior
