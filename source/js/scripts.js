@@ -53,6 +53,8 @@ $(document).ready(function () {
     function lockscroll(){
       $(window).scrollTop(currentScroll);
   }
+
+
     // Modal Click Behavior
     $('.js-open-modal').click(function () {
         var data = $(this).attr('data-open')
@@ -80,6 +82,14 @@ $(document).ready(function () {
         $('.modal').removeClass('js-active');
         $('#overlay').removeClass('js-active');
         $('body').removeClass('js-body-modal-active');
+
+        // stop all iframe videos by reloading the iframes
+        var iframes = $('.modal iframe');
+        if (iframes != null) {
+            for (var i = 0; i < iframes.length; i++) {
+                iframes[i].src = iframes[i].src;
+            }
+        }
     });
 
     // General Click Behavior for Overlay
