@@ -563,11 +563,6 @@
     }
 
     .e-expandable {
-        * {
-            font-size: 1.1rem;
-            font-weight: 300;
-        }
-
         > *:not(:first-child) {display: none;}
         > *:only-of-type + .e-read-more { display: none; }
 
@@ -580,6 +575,22 @@
             font-weight: 600;
 
             &:hover { text-decoration: underline; }
+        }
+
+    }
+
+    .e-expandable, .e-expanded {
+        * {
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        > :first-child {
+          display: block;
+          margin-top: 0;
+          p {
+            margin-top: 0;
+            }
         }
 
         .e-h2, h2 {

@@ -140,4 +140,18 @@
     }
   }
 
+.e-toggle {
+  .material-icons {
+    font-size: 1.1rem;
+    transform: translateY(1px);
+  }
+}
+
+.case-study-main {
+  display: none;
+  &.js-active {
+    display: block;
+  }
+}
+
 }

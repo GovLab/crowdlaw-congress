@@ -59,7 +59,7 @@ layout: default
         <p><strong style="width: 40%">Participatory Task</strong><span>{{page.participatory_task}}</span></p>
         {% endif %}
         {% if page.link %}
-        <p><strong style="width: 40%">URL</strong><span><a href="{{page.link}}" target="_blank">{{page.link}}</a></span></p>
+        <p><strong style="width: 40%">URL</strong><span><a href="{{page.link}}" target="_blank"><i class="material-icons">launch</i></a></span></p>
       <!--   <p><strong style="width: 40%"></strong><span><a href="{{page.link}}" target="_blank">{{page.link}}</span></p> -->
         {% endif %}
       </div>
@@ -90,6 +90,7 @@ layout: default
   <!-- End of Header -->
 
   {% ifhascontent briefing %}
+
   <section class="page-section">
     <div class="row">
       <div class="column small-12 large-3 sidebar">
@@ -105,9 +106,11 @@ layout: default
 
   <div class="divider">
     <div class="row align-center">
-      <h2>Case Study</h2>
+      <a class="button e-toggle js-case-study-toggle">Read the Full Case Study <i class="material-icons">add_circle</i></a>
     </div>
   </div>
+
+  <div class="case-study-main">
 
   {% endifhascontent %}
 
@@ -118,9 +121,9 @@ layout: default
         <h3>What Is It?</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock what %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -134,9 +137,9 @@ layout: default
         <h3>What Is It?</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock how %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -150,9 +153,9 @@ layout: default
         <h3>Key Takeaways</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock takeaways %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -167,9 +170,9 @@ layout: default
         <h3>Introduction</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock introduction %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -183,9 +186,9 @@ layout: default
         <h3>Propuestas Workflow</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock propuestas %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -201,9 +204,9 @@ layout: default
         <h3>Student-led Civic Audits in Brazil</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock studentled %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -219,9 +222,9 @@ layout: default
         <h3>TransGov Ghana</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock ghana %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -236,9 +239,9 @@ layout: default
         <h3>Connecticut Policy and Economic Council (CPEC): City Scan</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock ghana %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -252,9 +255,9 @@ layout: default
         <h3>Background</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock background %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -271,9 +274,9 @@ layout: default
         <h3>Project Description</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock description %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -288,9 +291,9 @@ layout: default
         <h3>From Campaigning to Governing</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock campaign %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -304,9 +307,9 @@ layout: default
         <h3>Mechanics / Workflow</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock mechanics %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -321,9 +324,9 @@ layout: default
         <h3>Mechanics of Constituci&oacute;n CDMX</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock cdmx %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -337,9 +340,9 @@ layout: default
         <h3>Mechanics of Mudamos</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock mudamos %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -353,9 +356,9 @@ layout: default
         <h3>Mechanics of Better Reykjavik</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock reyk %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -370,9 +373,9 @@ layout: default
         <h3>Mechanics of My District</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock dist %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -386,9 +389,9 @@ layout: default
         <h3>Crowd Constitutionmaking in Action</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock crowd %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -402,9 +405,9 @@ layout: default
         <h3>A Note on Lower Levels of Government</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock anote %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -418,9 +421,9 @@ layout: default
         <h3>The vTaiwan Process</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock vtaiwan %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -435,9 +438,9 @@ layout: default
         <h3>Permanent Beta</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock beta %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -452,9 +455,9 @@ layout: default
         <h3>Mechanics of Rahvakogu</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock rahvakogu %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -469,9 +472,9 @@ layout: default
         <h3>Participation</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock participation %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -485,9 +488,9 @@ layout: default
         <h3>Institutional and Cultural Changes</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock cultural %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -501,9 +504,9 @@ layout: default
         <h3>Advertisement Campaigns</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock advertisement %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -518,9 +521,9 @@ layout: default
         <h3>Costs</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock costs %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -534,9 +537,9 @@ layout: default
         <h3>Institutional Description and Impacts</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock instdescription %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -550,9 +553,9 @@ layout: default
         <h3>Institutional Description</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock instdescriptionsolo %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -566,9 +569,9 @@ layout: default
         <h3>Institutional Impacts</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock instimpactsolo %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -582,9 +585,9 @@ layout: default
         <h3>Impacts</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock impacts %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -598,9 +601,9 @@ layout: default
         <h3>Mechanics of Rahvaalgatus</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock rahvaalgatus %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -615,9 +618,9 @@ layout: default
         <h3>Risks and Challenges</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock risks %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -632,9 +635,9 @@ layout: default
         <h3>What are the outcomes?</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock whatoutcomes %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -649,9 +652,9 @@ layout: default
         <h3>Outcomes</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock outcomes %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -666,9 +669,9 @@ layout: default
         <h3>Numbers and Results</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock numbers %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -682,9 +685,9 @@ layout: default
         <h3>Future Plans</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock future %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -699,9 +702,9 @@ layout: default
         <h3>Reactions</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock reactions %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -715,9 +718,9 @@ layout: default
         <h3>Users&rsquo; experience and perceptions after engaging with Constituci&oacute;n CDMX</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock experience %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -733,9 +736,9 @@ layout: default
         <h3>Table 1: Online petitions that surpassed the established thresholds of digital signatures in the Constituci&oacute;n CDMX strategy.</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock tableone %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -750,9 +753,9 @@ layout: default
         <h3>Key Learnings</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock learnings %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -768,9 +771,9 @@ layout: default
         <h3>Impact</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock impact %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -785,9 +788,9 @@ layout: default
         <h3>What are the benefits?</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock benefits %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -802,9 +805,9 @@ layout: default
         <h3>What are the risks?</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock whatrisk %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -818,9 +821,9 @@ layout: default
         <h3>Duration</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock duration %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -835,9 +838,9 @@ layout: default
         <h3>Budget / Resources</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock resources %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -852,9 +855,9 @@ layout: default
         <h3>Recommendations</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock recommendations %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -869,9 +872,9 @@ layout: default
         <h3>Conclusion</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock conclusion %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -885,9 +888,9 @@ layout: default
         <h3>Interviews</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="e-expandable">
+        <div class="e-expanded">
           {% contentblock interviews %}
-          <span class="e-read-more js-more-toggle">Read More</span>
+          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -901,9 +904,8 @@ layout: default
         <h3>Footnotes</h3>
       </div>
       <div class="column small-12 large-9">
-        <div class="">
+        <div class="e-expanded">
           {% contentblock footnotes %}
-          <!-- <span class="e-read-more js-more-toggle">Read More</span> -->
         </div>
       </div>
     </div>
@@ -927,6 +929,11 @@ layout: default
   {% endifhascontent %}
 
   {% endcomment %}
+
+{% ifhascontent briefing %}
+</div>
+{% endifhascontent %}
+
 </main>
 
 <section class="page-section">

@@ -21,6 +21,16 @@ $(document).ready(function () {
     // });
 
 
+    $('.js-case-study-toggle').click(function () {
+        $(this).toggleClass('js-active');
+        $('body').find('.case-study-main').toggleClass('js-active');
+        if ($(this).hasClass('js-active')) {
+            $(this).find('.material-icons').text('remove_circle');
+        } else {
+            $(this).find('.material-icons').text('add_circle');
+        }
+    })
+
     $( ".iframe-js-h" ).each(function( index ) {
       $(this).height($(this).width()*0.5625);
     });
