@@ -1,0 +1,114 @@
+---
+layout: default
+---
+<main class="case-study-page" role="main" id="case-study-page">
+  <!-- Header with structured data -->
+  <section class="top-section" style="background-image: url(images/banners/{{page.image}})">
+    <div class="top-section__shade"></div>
+    <div class="row">
+      <div class="large-12 small-12 column">
+        <hgroup class="titles" id="titles">
+          <h4 class="collection m-{{page.impact_type | slugify}}">{{page.case_collection_long}}</h4>
+          {% assign title_size = page.title | size %}
+          {% if title_size > 20 %}
+          <h1 class="large-title">{{page.title}}</h1>
+          {% else %}
+          <h1>{{page.title}}</h1>
+          {% endif %}
+          <h2>{{page.description}}</h2>
+
+          {% if page.impact_type == "problem_definition" %}
+          <div class="progress progress--1">
+          {% endif %}
+          {% if page.impact_type == "solution_identification" %}
+          <div class="progress progress--2">
+          {% endif %}
+          {% if page.impact_type == "drafting" %}
+          <div class="progress progress--3">
+          {% endif %}
+          {% if page.impact_type == "evaluation" %}
+          <div class="progress progress--4">
+          {% endif %}
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+          {% comment %}
+          {% if page.authors %}
+            <h4>by {{page.authors}}{% if page.special_thanks %}<a class="_idFootnoteLink" href="#footnote-999">*</a>{% endif %}</h4>
+          {% endif %}
+          {% endcomment %}
+        </hgroup>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 column tags tags--left hide-for-small-only">
+        {% comment %}
+        {% if page.impact_type %}
+          <p><strong style="width: 40%">Impact</strong><span>{{page.impact_type}}</span></p>
+        {% endif %}
+        {% endcomment %}
+        {% if page.method %}
+        <p><strong style="width: 40%">Method</strong><span>{{page.method}}</span></p>
+        {% endif %}
+        {% if page.participatory_task %}
+        <p><strong style="width: 40%">Participatory Task</strong><span>{{page.participatory_task}}</span></p>
+        {% endif %}
+        {% if page.link %}
+        <p><strong style="width: 40%">URL</strong><span><a href="{{page.link}}" target="_blank"><i class="material-icons">launch</i></a></span></p>
+      <!--   <p><strong style="width: 40%"></strong><span><a href="{{page.link}}" target="_blank">{{page.link}}</span></p> -->
+        {% endif %}
+      </div>
+      {% ifhascontent readtime %}
+      {% contentblock readtime %}
+      {% endifhascontent %}
+    </div>
+
+    <div class="floating-button">
+      {% if page.download_briefing %}
+      <a class="button button--{{page.impact_type | slugify}}" href="{{'/files/' | append: page.download_briefing | relative_url}}">Download briefing note<i class="material-icons">file_download</i></a>
+      {% endif %}
+    </div>
+
+  </section>
+
+  <!-- SOCIAL MEDIA ICONS -->
+  <div class="row show-for-large sm-icons">
+    <ul class="b-sidebar">
+      <a href="#" id="facebook"><li class="facebook"><i class="fa fa-facebook"></i></li></a><a href="#" id="linkedin"><li class="linkedin"><i class="fa fa-linkedin"></i></li></a>
+      <a href="#" id="twitter"><li class="twitter"><i class="fa fa-twitter"></i></li></a>
+      <a href="#" id="email" message="mailto:?subject={{ page.title | url_escape }}&body={{ page.description | append: '%0A%0ARead More%0A%0A' | url_escape}}"><li class="email"><i class="fa fa-envelope"></i></li></a>
+    </ul>
+  </div>
+  <!-- End of Header -->
+
+  {% ifhascontent briefing %}
+
+  <section class="page-section">
+    <div class="row">
+      <div class="column small-12 large-3 sidebar">
+        <h3>Briefing Notes</h3>
+      </div>
+      <div class="column small-12 large-9">
+        <div class="e-expanded">
+          {% contentblock briefing %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endifhascontent %}
+
+</main>
+
+<section class="page-section">
+  <div class="row">
+    <div class="column large-12 e-last">
+      <p ><span >For more information or to request a proposal for a CrowdLaw project contact: </span><a href="mailto:crowdlaw@thegovlab.org">crowdlaw@thegovlab.org</a><span >.</span></p>
+    </div>
+  </div>
+</section>
