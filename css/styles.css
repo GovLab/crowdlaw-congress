@@ -2640,7 +2640,6 @@ ul.b-sidebar {
     max-width: 85%; }
     .b-sticky .row a {
       text-decoration: none;
-      font-style: italic;
       font-weight: 700;
       color: rgba(255, 255, 255, 0.8);
       transition: all .4s ease; }
