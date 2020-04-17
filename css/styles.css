@@ -598,7 +598,7 @@ main .b-divider {
 
 #case-study-page .top-section,
 #open-data-impact-homepage .top-section {
-  height: 90vh;
+  height: 75vh;
   position: relative;
   background: url("/images/banners/sm/home.jpg") no-repeat center center;
   background-size: cover; }
@@ -884,6 +884,10 @@ main .b-divider {
 .page-section .e-expandable .no-style, .page-section .e-expanded .no-style {
   box-shadow: none;
   margin: 0; }
+.page-section .e-expandable .e-extract, .page-section .e-expanded .e-extract {
+  background-color: rgba(22, 74, 122, 0.05);
+  padding: 20px 20px 20px 40px;
+  position: relative; }
 .page-section .e-expandable .e-quote, .page-section .e-expanded .e-quote {
   background-color: rgba(22, 74, 122, 0.05);
   padding: 20px 20px 20px 40px;
