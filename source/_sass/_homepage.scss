@@ -1,9 +1,25 @@
 #open-data-impact-homepage {
+  .row-video{
+    display:flex;
+    flex-direction: row;
+    @include breakpoint($small-only) {
+      flex-direction: column;
+    }
+    @include breakpoint($mobile-landscape) {
+      flex-direction: column;
+    }
+  }
   .top-section {
     height: 120vh;
     position: relative;
     background: url("/images/banners/sm/home.jpg") no-repeat center center;
     background-size: cover;
+    @include breakpoint($small-only) {
+      height: 180vh;
+    }
+    @include breakpoint($mobile-landscape) {
+      height: 180vh;
+    }
     &__shade {
       pointer-events: none;
       position: absolute;
