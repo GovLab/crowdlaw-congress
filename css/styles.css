@@ -1126,11 +1126,26 @@ table.m-respond .e-line-header {
   .e-last a:hover {
     border-bottom: 2px solid #AD0054; }
 
+#open-data-impact-homepage .row-video {
+  display: flex;
+  flex-direction: row; }
+  @media (max-width: 39.9375em) {
+    #open-data-impact-homepage .row-video {
+      flex-direction: column; } }
+  @media (max-width: 767px) and (orientation: landscape) {
+    #open-data-impact-homepage .row-video {
+      flex-direction: column; } }
 #open-data-impact-homepage .top-section {
   height: 120vh;
   position: relative;
   background: url("/images/banners/sm/home.jpg") no-repeat center center;
   background-size: cover; }
+  @media (max-width: 39.9375em) {
+    #open-data-impact-homepage .top-section {
+      height: 180vh; } }
+  @media (max-width: 767px) and (orientation: landscape) {
+    #open-data-impact-homepage .top-section {
+      height: 180vh; } }
   #open-data-impact-homepage .top-section__shade {
     pointer-events: none;
     position: absolute;
